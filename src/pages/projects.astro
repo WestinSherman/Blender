@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StarMetalsesh from "../components/StarMetalsesh.astro";
-const allseshs = Object.values(
+const allprojects = Object.values(
     import.meta.glob("./projects/*.mdx", { eager: true }),
 );
 const pageTitle = "Projects";
@@ -10,7 +10,7 @@ const pageTitle = "Projects";
 <BaseLayout pageTitle={pageTitle}>
     <ul>
         {
-            allseshs.map((project: any) => (
+            allprojects.map((project: any) => (
                 <StarMetalsesh
                     url={project.url}
                     title={project.frontmatter.title}

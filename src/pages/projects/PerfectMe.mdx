@@ -21,6 +21,7 @@ import BodyRigF from './assets/_BodyRiggingF.png';
 import FinallyRigged from './assets/_FinallyRigged.png';
 import WallHammerRef from './assets/_WallHammerRef.png';
 import End from './assets/_End.png';
+import FBones from './assets/_FixBones.png';
 
 # The Perfect Me
 My goal with this project is to create a 3D model of a Half-Life combine soldier armored
@@ -77,6 +78,10 @@ I have finished the Mesh but the rigging isn't working. I could sort of get some
 would break. Right now I am just going to work on getting the mesh cleaner and make it a propper low poly model.
 I would like to eventually make a high poly version of the model. I don't think I will be trying again at getting the rigging working for a while.
 <Image src={End} alt="End" width={500} height={300} />
+#### Fixing Bones:
+I have watched a few videos and found out that parenting each brocken mesh piece to a specific bone closest to the mesh peice might fix them.
+I also might have to change the weight painting on the Mesh pieces to get them to work correctly.
+<Image src={FBones} alt="FixingBones" width={500} height={300} />
 
  {/*
  TODO:

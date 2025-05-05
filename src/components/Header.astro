@@ -1,7 +1,89 @@
 ---
-import Navigation from "./Navigation.astro";
+import { Image } from "astro:assets";
+import Logo from "../assets/_Logo.png";
+import "@fontsource-variable/open-sans";
+import "../styles/global.css";
+
+//interface Session {
+//    url: string;
+//    frontmatter: {
+//        title: string;
+//    };
+//}
+
+//const allseshs: Session[] = Object.values(
+//    import.meta.glob<{ url: string; frontmatter: { title: string } }>(
+//        "./seshs/*.mdx",
+//        { eager: true },
+//    ),
+//);
+//const pageTitle = "StarMetal Sessions";
 ---
 
-<header>
-    <Navigation />
+<header class="header">
+    <nav class="nav">
+        <a href="/">Home</a>
+        <ul class="menu">
+            <li class="Projects">
+                <a href="/projects/">Projects</a>
+            </li>
+            <li class="ideas">
+                <a href="/ideas/">Ideas</a>
+            </li>
+            <li class="links">
+                <a href="/usefulLinks/">Useful Links</a>
+            </li>
+        </ul>
+    </nav>
 </header>
+
+<style>
+    html {
+        font-family: "Open Sans Variable", sans-serif;
+        font-weight: 400;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-size: var(--step-1);
+    }
+    .menu {
+        font-size: var(--step-0);
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        height: 32px;
+        border-bottom: 2px solid cyan;
+    }
+
+    nav a {
+        background-size: 0%;
+        background-image: linear-gradient(var(--color-link-bg) 0 0);
+        background-repeat: no-repeat;
+        color: white;
+        text-decoration: none;
+        transition: 0.4s;
+        padding: 0 0.25em;
+    }
+    nav a:hover {
+        color: var(--color-link-dark);
+        background-size: 100%;
+        text-decoration: none;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+</style>
